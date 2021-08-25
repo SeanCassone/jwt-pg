@@ -17,4 +17,5 @@ module.exports = async (req, res, next) => {
     console.log(error.message);
     return res.satus(403).json("Not Authorized");
   }
+  next();
 };
