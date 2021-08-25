@@ -11,7 +11,7 @@ module.exports = async (req, res, next) => {
     }
     //cehck if token is valid
     const payload = jwt.verify(jwtToken, process.env.jwtSecret);
-
+    // req.user has the payload
     req.user = payload.user;
   } catch (error) {
     console.log(error.message);
